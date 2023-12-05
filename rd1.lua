@@ -219,10 +219,10 @@ function displayRightSmallScreen(pos, screenFlash)
 end
 
 function script.update(dt)
-    if false then
+    if car.rpm < 50 then
         display.rect { pos = vec2(0,0), color = rgbm.colors.black, size = vec2(1024,1024) }
         boot = true
-    elseif true then
+    elseif not boot then
         displayBackground()
         handleSelectScreenMode()
         displayBigScreen(allScreens[1][currentBigScreen], allScreens[1]["Flash"])
